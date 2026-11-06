@@ -1,0 +1,30 @@
+---
+layout: default
+title: Archive
+permalink: /archive/
+---
+<h1 class="index-title archive-heading"><span aria-hidden="true">🗃️</span> Archive</h1>
+<p class="archive-intro">Every entry, organized by year. Newest first.</p>
+<div class="archive-grid">
+  {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+  {% for year in posts_by_year %}
+  <section class="archive-year" aria-labelledby="archive-year-{{ year.name }}">
+    <h2 id="archive-year-{{ year.name }}">{{ year.name }}</h2>
+    <div class="archive-entries">
+      {% for post in year.items %}
+        <div class="entry">
+          <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %d' }}</time>
+          <div class="entry-content">
+            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            {% if post.category %}
+              {% assign slug = post.category | slugify %}
+              {% assign category_path = '/' | append: slug | append: '/' %}
+              <a class="tag" href="{{ category_path | relative_url }}" aria-label="View {{ post.category | escape }} entries">{{ post.category | escape }}</a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+</div>

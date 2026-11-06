@@ -85,3 +85,20 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--link); outline-
 .site-header nav { align-items: center; }
 .theme-toggle { font-size: 15px; line-height: 1; padding: 4px 2px; margin: 0; cursor: pointer; color: var(--text); background: transparent; border: 0; border-radius: 4px; }
 .theme-toggle:hover { background: var(--tag-bg); }
+
+/* Keep all text and controls tied to the selected theme, including visited links. */
+:root[data-theme="dark"] body, :root[data-theme="dark"] .page { color: var(--text); background-color: var(--bg); }
+.brand, .brand:visited { color: var(--text); }
+a, a:visited { color: var(--link); }
+.brand, .brand:visited { color: var(--text); }
+.tag, .tag:visited { color: var(--tag-text); }
+.tag:hover { color: var(--link); }
+.archive-heading { margin-top: 38px; margin-bottom: 9px; }
+.archive-intro { font-size: 13px; color: var(--muted); line-height: 1.7; margin: 0 0 26px; }
+.archive-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 28px; row-gap: 28px; align-items: start; }
+.archive-year { min-width: 0; }
+.archive-year h2 { font-size: 17px; line-height: 1.4; color: var(--heading); margin: 0 0 10px; padding-bottom: 7px; border-bottom: 1px solid var(--border); }
+.archive-year .entry { grid-template-columns: 56px minmax(0, 1fr); gap: 8px; padding: 6px 0; }
+.archive-year .entry time { font-size: 11px; }
+.archive-year .entry-content { overflow-wrap: anywhere; }
+@media (max-width: 620px) { .archive-grid { grid-template-columns: minmax(0, 1fr); row-gap: 25px; } .archive-year .entry { grid-template-columns: 65px minmax(0, 1fr); } }

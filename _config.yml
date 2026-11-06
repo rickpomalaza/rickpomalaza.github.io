@@ -4,10 +4,11 @@ url: ""
 baseurl: ""
 lang: en
 timezone: America/New_York
-permalink: /:year/:month/:day/:title/
+permalink: /:title/
 markdown: kramdown
 highlighter: rouge
 plugins:
   - jekyll-feed
+  - jekyll-redirect-from
 exclude:
   - README.md

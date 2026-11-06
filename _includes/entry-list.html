@@ -4,7 +4,7 @@
       <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %d, %Y' }}</time>
       <div class="entry-content">
         <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        {% if post.category %}<a class="tag" href="{{ post.category | slugify | prepend: '/' | append: '/' | relative_url }}" aria-label="View {{ post.category | escape }} entries">{{ post.category | escape }}</a>{% endif %}
+        {% if post.category %}{% assign slug = post.category | slugify %}{% assign category_path = '/' | append: slug | append: '/' %}<a class="tag" href="{{ category_path | relative_url }}" aria-label="View {{ post.category | escape }} entries">{{ post.category | escape }}</a>{% endif %}
       </div>
     </div>
   {% endfor %}
