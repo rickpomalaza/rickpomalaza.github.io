@@ -1,0 +1,12 @@
+<div class="entries" data-entry-list data-page-size="10">
+  {% for post in include.entries %}
+    <div class="entry" {% if forloop.index > 10 %}hidden{% endif %}>
+      <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %d, %Y' }}</time>
+      <div class="entry-content">
+        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        {% if post.category %}<a class="tag" href="{{ '/categories/' | append: post.category | slugify | append: '/' | relative_url }}" aria-label="View {{ post.category | escape }} entries">{{ post.category | escape }}</a>{% endif %}
+      </div>
+    </div>
+  {% endfor %}
+  {% if include.entries.size > 10 %}<button class="more" type="button" data-view-more>View more entries ↓</button>{% endif %}
+</div>
