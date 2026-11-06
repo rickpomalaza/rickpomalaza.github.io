@@ -1,6 +1,6 @@
-# Rick's Notes
+# Rick's Notes/Blog
 
-A minimal, browser-editable Jekyll blog for GitHub Pages.
+My own custom minimal Jekyll blog for GitHub Pages.
 
 ## Publishing
 
