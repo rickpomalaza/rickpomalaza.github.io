@@ -63,7 +63,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--link); outline-
 .more:hover { text-decoration: underline; }
 .back { display: inline-block; margin: 32px 0 25px; font-size: 12px; }
 .category-heading { margin-top: 0; }
-.post h1, .standard-page h1 { margin: 0 0 12px; color: var(--heading); font-size: 25px; line-height: 1.35; letter-spacing: -.5px; }
+.post h1, .standard-page h1 { margin: 0 0 12px; color: var(--heading); font-size: 22px; line-height: 1.35; letter-spacing: -.5px; }
 .post-meta { margin-bottom: 31px; color: var(--secondary); font-size: 11px; }
 .post-body, .standard-page { color: var(--text); font-size: 14px; line-height: 1.85; }
 .post-body p, .standard-page p { margin: 0 0 19px; }
