@@ -22,7 +22,16 @@
 <body>
   <div class="page">
     <header class="site-header">
-      <a class="brand" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+      {% if page.layout == 'post' %}
+  <a class="post-site-label" href="{{ '/' | relative_url }}">
+    <span aria-hidden="true">💾</span>
+    <span>rickpomalaza.github.io</span>
+  </a>
+{% else %}
+  <a class="brand" href="{{ '/' | relative_url }}">
+    {{ site.title | escape }}
+  </a>
+{% endif %}
       <nav aria-label="Primary navigation">
         <a href="{{ '/' | relative_url }}">Home</a>
         <a href="{{ '/about/' | relative_url }}">About</a>
