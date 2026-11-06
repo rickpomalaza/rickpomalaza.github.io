@@ -1,0 +1,7 @@
+---
+layout: default
+---
+<a class="back" href="{{ '/' | relative_url }}">← Back to all entries</a>
+<h1 class="index-title category-heading"><span aria-hidden="true">📂</span> {{ page.category | capitalize }} entries</h1>
+{% assign entries = site.categories[page.category] %}
+{% include entry-list.html entries=entries %}
