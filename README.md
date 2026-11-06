@@ -31,4 +31,4 @@ The homepage and category lists automatically show 10 entries at a time. A View 
 3. In **Settings → Pages**, select **Deploy from a branch**, `main`, `/ (root)`, and save.
 4. Visit `https://<your-github-username>.github.io/` after the deployment succeeds.
 
-No local software required. This repo is your site's source and Git history; make occasional independent backups too.
+No local software required.
