@@ -1,0 +1,13 @@
+title: "Rick's Notes"
+description: "A little corner of the internet for my thoughts, notes, and occasional ramblings."
+url: ""
+baseurl: ""
+lang: en
+timezone: America/New_York
+permalink: /:year/:month/:day/:title/
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+exclude:
+  - README.md
