@@ -1,6 +1,6 @@
-# Rick's Notes/Blog
+# Rick's Dev Log
 
-My own custom minimal Jekyll blog for GitHub Pages.
+My own custom Jekyll blog for GitHub Pages.
 
 ## Publishing
 
